@@ -1,4 +1,8 @@
-/* This file adds the requisite utility classes for Tailwind to work. */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.btn-bg {
+  background-color: #42C83C;
+  border-radius: 30;
+}

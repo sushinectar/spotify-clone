@@ -1,9 +1,14 @@
-import { View, Text } from 'react-native';
+import { View, Text, Image } from "react-native";
+import { Link } from "expo-router";
 
-export default function Home() {
+export default function home() {
   return (
     <View className="flex m-auto">
-      <Text className="font-black text-yellow-500 text-xl">Hello World</Text>
+      <Link href={"/started"}>
+        <View className="">
+          <Image source={require("../../assets/vector.png")} />
+        </View>
+      </Link>
     </View>
   );
 }
