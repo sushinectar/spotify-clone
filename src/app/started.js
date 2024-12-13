@@ -17,7 +17,7 @@ export default function started() {
     >
       <Image
         className="m-auto mt-20"
-        source={require("../../assets/vector.png")}
+        source={require("../../assets/vector-md.png")}
       ></Image>
       <View className="flex m-auto mb-20">
         <View className="flex justify-center items-center">

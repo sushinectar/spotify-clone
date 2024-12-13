@@ -22,7 +22,7 @@ export default function ModeSelection() {
     >
       <Image
         className="m-auto mt-20"
-        source={require("../../assets/vector.png")}
+        source={require("../../assets/vector-md.png")}
       />
       <View className="flex justify-center items-center mb-20 gap-16">
         <View className="flex items-center gap-12">
