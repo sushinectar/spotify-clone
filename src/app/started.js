@@ -6,13 +6,14 @@ import {
   Image,
   TouchableOpacity,
 } from "react-native";
+
 import { Link } from "expo-router";
 
 export default function started() {
   return (
     <ImageBackground
       source={require("../../assets/started-bg.png")}
-      className="flex object-cover w-screen h-screen"
+      className="background flex object-cover w-screen h-screen"
     >
       <Image
         className="m-auto mt-20"

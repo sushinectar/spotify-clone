@@ -1,9 +1,13 @@
 import '../../global.css';
 
-import { Slot } from 'expo-router';
+import React from "react";
+import { ThemeProvider } from '../components/themeContext';
+import { Slot } from "expo-router";
 
 export default function Layout() {
   return (
-    <Slot />
-  )
+    <ThemeProvider>
+      <Slot />
+    </ThemeProvider>
+  );
 }
