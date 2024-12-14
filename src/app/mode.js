@@ -9,7 +9,7 @@ import {
 import { Link } from "expo-router";
 import { useTheme } from "../components/themeContext";
 
-export default function ModeSelection() {
+export default function mode() {
   const { theme, toggleTheme } = useTheme();
 
   const isLightTheme = theme === "light";

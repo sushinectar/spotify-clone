@@ -1,7 +1,7 @@
 import { View, Text, Image } from "react-native";
 import { Link } from "expo-router";
 
-export default function home() {
+export default function index() {
   return (
     <View className="flex m-auto">
       <Link href={"/started"}>

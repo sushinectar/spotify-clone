@@ -4,7 +4,7 @@ import { useTheme } from "../components/themeContext";
 
 import { Link } from "expo-router";
 
-export default function HomePage() {
+export default function sign() {
   const { theme } = useTheme();
 
   const styles = StyleSheet.create({
@@ -16,28 +16,30 @@ export default function HomePage() {
 
   return (
     <View style={styles.container}>
-      <Image
-        className="absolute top-0 right-0"
-        source={require("../../assets/union-top.png")}
-      />
-      <Link
-        className="absolute top-16 left-8 z-20 rounded-full"
-        href={"/mode"}
-        style={[
-          {
-            backgroundColor:
-              theme === "light"
-                ? "rgba(0, 0, 0, 0.1)"
-                : "rgba(255, 255, 255, 0.1)",
-          },
-        ]}
-      >
-        <View>
-          <TouchableOpacity className="flex justify-center items-center w-10 h-10">
-            <Image className="" source={require("../../assets/arrow.png")} />
-          </TouchableOpacity>
-        </View>
-      </Link>
+      <View>
+        <Image
+          className="absolute top-0 right-0"
+          source={require("../../assets/union-top.png")}
+        />
+        <Link
+          className="absolute top-16 left-8 z-20 rounded-full"
+          href={"/mode"}
+          style={[
+            {
+              backgroundColor:
+                theme === "light"
+                  ? "rgba(0, 0, 0, 0.1)"
+                  : "rgba(255, 255, 255, 0.1)",
+            },
+          ]}
+        >
+          <View>
+            <TouchableOpacity className="flex justify-center items-center w-10 h-10">
+              <Image className="" source={require("../../assets/arrow.png")} />
+            </TouchableOpacity>
+          </View>
+        </Link>
+      </View>
       <View className="flex h-screen justify-center items-center z-10">
         <View className="flex items-center mb-28 gap-8">
           <Image
