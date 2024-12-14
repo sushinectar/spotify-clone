@@ -10,25 +10,27 @@ import {
   TextInput,
 } from "react-native";
 import { SafeAreaView, SafeAreaProvider } from "react-native-safe-area-context";
-import { useTheme } from "../components/themeContext";
+import { useTheme } from "../../components/themeContext";
 
 import { Link } from "expo-router";
 
-export default function signIn() {
+export default function signUp() {
   const { theme } = useTheme();
   const [username, onChangeUsername] = useState("");
+  const [email, onChangeEmail] = useState("");
   const [password, setPassword] = useState("");
   const [isPasswordVisible, setPasswordVisible] = useState(false);
 
   const styles = StyleSheet.create({
     container: {
       flex: 1,
+      paddingBottom: 322,
       backgroundColor: theme === "light" ? "white" : "black",
     },
     toggleButton: {
       position: "absolute",
       right: 15,
-      top: 110,
+      top: 200,
     },
     toggleImage: {
       width: 44,
@@ -40,7 +42,7 @@ export default function signIn() {
     },
     recovery: {
       position: "absolute",
-      top: -100,
+      top: -2,
       left: 12,
     },
     signBtn: {
@@ -49,11 +51,11 @@ export default function signIn() {
   });
 
   return (
-    <View className="pb-64" style={styles.container}>
+    <View style={styles.container}>
       <View>
         <Link
           className="absolute top-16 left-8 rounded-full"
-          href={"/mode"}
+          href={"../start/mode"}
           style={[
             {
               backgroundColor:
@@ -65,13 +67,13 @@ export default function signIn() {
         >
           <View>
             <TouchableOpacity className="flex justify-center items-center w-10 h-10">
-              <Image className="" source={require("../../assets/arrow.png")} />
+              <Image className="" source={require("../../../assets/arrow.png")} />
             </TouchableOpacity>
           </View>
         </Link>
         <Image
           className="m-auto mt-20"
-          source={require("../../assets/vector-sm.png")}
+          source={require("../../../assets/vector-sm.png")}
         />
       </View>
       <View className="m-auto">
@@ -86,16 +88,23 @@ export default function signIn() {
             },
           ]}
         >
-          Sign In
+          Register
         </Text>
-        <View className="mb-4">
+        <View className="mb-32">
           <SafeAreaProvider>
             <SafeAreaView className="flex gap-6">
               <TextInput
                 className="h-4 border border-zinc-400 p-10 rounded-3xl"
                 style={styles.input}
                 onChangeText={onChangeUsername}
-                placeholder="Username Or Email"
+                placeholder="Enter Username"
+                placeholderTextColor="#888"
+              />
+              <TextInput
+                className="h-4 border border-zinc-400 p-10 rounded-3xl"
+                style={styles.input}
+                onChangeText={onChangeEmail}
+                placeholder="Enter Email"
                 placeholderTextColor="#888"
               />
               <TextInput
@@ -113,8 +122,8 @@ export default function signIn() {
                 <Image
                   source={
                     isPasswordVisible
-                      ? require("../../assets/hide.png")
-                      : require("../../assets/hide.png")
+                      ? require("../../../assets/hide.png")
+                      : require("../../../assets/hide.png")
                   }
                   style={styles.toggleImage}
                 />
@@ -122,22 +131,26 @@ export default function signIn() {
             </SafeAreaView>
           </SafeAreaProvider>
           <View>
-            <Link style={styles.recovery} href={"/recovery"}>
+            <Link style={styles.recovery} href={"./recovery"}>
               <View>
-                <Text className="text-zinc-500 font-bold">Recovery Password</Text>
+                <Text className="text-zinc-500 font-bold">
+                  Recovery Password
+                </Text>
               </View>
             </Link>
           </View>
         </View>
         <View style={styles.signBtn}>
-          <Link href={"/sign"}>
+          <Link href={"../main/home"}>
             <View>
               <TouchableOpacity className="btn-bg flex justify-center items-center w-96 h-28">
-                <Text className="text-2xl text-zinc-50 font-bold">Sign In</Text>
+                <Text className="text-2xl text-zinc-50 font-bold">
+                  Create Account
+                </Text>
               </TouchableOpacity>
             </View>
           </Link>
-          <View className="flex flex-row gap-2 mt-6">
+          <View className="flex flex-row gap-2 mt-6 mb-12">
             <View
               style={{
                 borderBottomColor: "black",
@@ -158,20 +171,24 @@ export default function signIn() {
           </View>
         </View>
         <View className="flex flex-row justify-center align-center items-center gap-24">
-          <Image
-            className="mt-12"
-            source={require("../../assets/google-icon.png")}
-          />
-          <Image
-            className="mt-12"
-            source={require("../../assets/iphone-icon.png")}
-          />
+          <Link href={"../main/home"}>
+            <Image
+              className="mt-12"
+              source={require("../../../assets/google-icon.png")}
+            />
+          </Link>
+          <Link href={"../main/home"}>
+            <Image
+              className="mt-12"
+              source={require("../../../assets/iphone-icon.png")}
+            />
+          </Link>
         </View>
         <View className="flex flex-row items-center m-auto mt-14 gap-1 z-10">
-          <Text>Not a Member?</Text>
-          <Link href={"/sign"}>
+          <Text>Do You Have An Account?</Text>
+          <Link href={"./signIn"}>
             <View>
-              <Text className="text-blue-500 font-bold">Register Now</Text>
+              <Text className="text-blue-500 font-bold">Sign In</Text>
             </View>
           </Link>
         </View>

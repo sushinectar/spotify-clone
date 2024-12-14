@@ -7,7 +7,7 @@ import {
   TouchableOpacity,
 } from "react-native";
 import { Link } from "expo-router";
-import { useTheme } from "../components/themeContext";
+import { useTheme } from "../../components/themeContext";
 
 export default function mode() {
   const { theme, toggleTheme } = useTheme();
@@ -16,13 +16,13 @@ export default function mode() {
 
   return (
     <ImageBackground
-      source={require("../../assets/mode-bg.png")}
+      source={require("../../../assets/mode-bg.png")}
       className="background flex object-cover w-screen h-screen"
       style={[{ backgroundColor: isLightTheme ? "rgba(255, 255, 255, 0.9)" : "rgba(255, 255, 255, 0.1)" }]}
     >
       <Image
         className="m-auto mt-20"
-        source={require("../../assets/vector-md.png")}
+        source={require("../../../assets/vector-md.png")}
       />
       <View className="flex justify-center items-center mb-20 gap-16">
         <View className="flex items-center gap-12">
@@ -36,7 +36,7 @@ export default function mode() {
             >
               <Image
                 className="w-20 h-20 p-6 rounded-full bg-zinc-600"
-                source={require("../../assets/light.png")}
+                source={require("../../../assets/light.png")}
               />
               <Text className="text-lg text-zinc-50">Light Mode</Text>
             </TouchableOpacity>
@@ -47,13 +47,13 @@ export default function mode() {
             >
               <Image
                 className="w-20 h-20 p-6 rounded-full bg-zinc-600"
-                source={require("../../assets/dark.png")}
+                source={require("../../../assets/dark.png")}
               />
               <Text className="text-lg text-zinc-50">Dark Mode</Text>
             </TouchableOpacity>
           </View>
         </View>
-        <Link className="w-96 h-28" href={"/sign"}>
+        <Link className="w-96 h-28" href={"../login/sign"}>
           <View>
             <TouchableOpacity className="btn-bg flex justify-center items-center w-96 h-28">
               <Text className="text-2xl text-zinc-50 font-bold">Continue</Text>

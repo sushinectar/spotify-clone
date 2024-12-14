@@ -1,6 +1,6 @@
 import React from "react";
 import { StyleSheet, View, Text, Image, TouchableOpacity } from "react-native";
-import { useTheme } from "../components/themeContext";
+import { useTheme } from "../../components/themeContext";
 
 import { Link } from "expo-router";
 
@@ -19,11 +19,11 @@ export default function sign() {
       <View>
         <Image
           className="absolute top-0 right-0"
-          source={require("../../assets/union-top.png")}
+          source={require("../../../assets/union-top.png")}
         />
         <Link
           className="absolute top-16 left-8 z-20 rounded-full"
-          href={"/mode"}
+          href={"../start/mode"}
           style={[
             {
               backgroundColor:
@@ -35,7 +35,7 @@ export default function sign() {
         >
           <View>
             <TouchableOpacity className="flex justify-center items-center w-10 h-10">
-              <Image className="" source={require("../../assets/arrow.png")} />
+              <Image className="" source={require("../../../assets/arrow.png")} />
             </TouchableOpacity>
           </View>
         </Link>
@@ -44,7 +44,7 @@ export default function sign() {
         <View className="flex items-center mb-28 gap-8">
           <Image
             className="m-auto mt-50 mb-10"
-            source={require("../../assets/vector-lg.png")}
+            source={require("../../../assets/vector-lg.png")}
           />
           <View className="flex items-center gap-6 w-96">
             <Text
@@ -66,7 +66,7 @@ export default function sign() {
             </Text>
           </View>
           <View className="flex flex-row items-center m-auto gap-20">
-            <Link href={"/signUp"}>
+            <Link href={"./signUp"}>
               <View>
                 <TouchableOpacity className="btn-bg flex justify-center items-center w-44 h-20">
                   <Text className="text-xl text-zinc-50 font-semibold">
@@ -75,7 +75,7 @@ export default function sign() {
                 </TouchableOpacity>
               </View>
             </Link>
-            <Link href={"/signIn"}>
+            <Link href={"./signIn"}>
               <View>
                 <TouchableOpacity className="flex justify-center items-center w-24 h-12">
                   <Text
@@ -100,11 +100,11 @@ export default function sign() {
       {/* Imagem de fundo */}
       <Image
         className="absolute bottom-0 left-0"
-        source={require("../../assets/billie-sign.png")}
+        source={require("../../../assets/billie-sign.png")}
       />
       <Image
         className="absolute bottom-0 right-0"
-        source={require("../../assets/union-bot.png")}
+        source={require("../../../assets/union-bot.png")}
       />
     </View>
   );

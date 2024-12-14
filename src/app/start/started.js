@@ -12,12 +12,12 @@ import { Link } from "expo-router";
 export default function started() {
   return (
     <ImageBackground
-      source={require("../../assets/started-bg.png")}
+      source={require("../../../assets/started-bg.png")}
       className="background flex object-cover w-screen h-screen"
     >
       <Image
         className="m-auto mt-20"
-        source={require("../../assets/vector-md.png")}
+        source={require("../../../assets/vector-md.png")}
       ></Image>
       <View className="flex m-auto mb-20">
         <View className="flex justify-center items-center">
@@ -29,7 +29,7 @@ export default function started() {
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sagittis
               enim purus sed phasellus. Cursus ornare id scelerisque aliquam.
             </Text>
-            <Link className="w-96 h-28" href={"/mode"}>
+            <Link className="w-96 h-28" href={"./mode"}>
               <View>
                 <TouchableOpacity className="btn-bg flex justify-center items-center w-96 h-28">
                   <Text className="text-2xl text-zinc-50 font-bold">
