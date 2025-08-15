@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.btn-bg {
+  background-color: #42C83C;
+  border-radius: 30;
+}
